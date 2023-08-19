@@ -10,6 +10,9 @@ export default {
         montserrat: ["Montserrat", "sans-serif"],
         source: ['"Source Sans 3"', "serif"],
       },
+      colors: {
+        lightblue: "#F3F6FE",
+      },
     },
   },
   plugins: [],
