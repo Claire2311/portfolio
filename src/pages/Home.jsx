@@ -62,8 +62,8 @@ function Home() {
               m'ayant toujours attiré.
             </p>
             <p className="mt-2">
-              Grâce à mes différents postes occupés, j'ai pu développer un
-              esprit d'analyse, de l'autonomie ainsi que des compétences en
+              Grâce à aux différents postes que j'ai occupé, j'ai pu développer
+              un esprit d'analyse, de l'autonomie ainsi que des compétences en
               résolution de problèmes. J'ai évolué dans des environnements en
               mode projet ainsi que lean.
             </p>
@@ -146,9 +146,6 @@ function Home() {
           Mes projets
         </h2>
         <div className="flex flex-col md:flex-row">
-          {/* <div className="h-48 md:w-[1000px] md:h-56 overflow-hidden hover:overflow-y-scroll">
-            <img src={cineAccueil} alt="Accueil du projet 1" className="" />
-          </div> */}
           <div className="h-48 md:w-[1000px] md:h-56 overflow-hidden hover:overflow-y-scroll">
             <img src={cineAccueil} alt="Accueil du projet 1" className="" />
           </div>
