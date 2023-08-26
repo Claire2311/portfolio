@@ -15,13 +15,13 @@ function Home() {
         <h1 className="font-source text-5xl ml-8 mt-6 md:text-9xl md:ml-28">
           Claire Girard
         </h1>
-        <div className="flex flex-col md:flex-row md:justify-between">
-          <p className="text-2xl mt-16 ml-8 md:text-5xl md:ml-28 md:mt-48">
+        <div className="flex flex-col  md:relative md:flex-row">
+          <p className="text-2xl mt-16 ml-8 md:text-4xl md:ml-28 md:mt-48">
             DÉVELOPPEUSE WEB
           </p>
           <a
             href="#contact"
-            className="text-2xl ml-8 mt-6 md:text-4xl md:m-48 md:self-center md:border-black md:border-b md:pb-1"
+            className="text-2xl ml-8 mt-6 md:text-3xl md:mt-48 md:absolute md:right-28 md:border-black md:border-b md:pb-1"
           >
             CONTACTEZ-MOI
           </a>
