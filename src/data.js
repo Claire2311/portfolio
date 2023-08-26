@@ -16,6 +16,10 @@ const technos = [
     name: "React",
   },
   {
+    img: "../src/assets/images/technos/Expressjs.png",
+    name: "ExpressJS",
+  },
+  {
     img: "../src/assets/images/technos/sql.png",
     name: "SQL",
   },

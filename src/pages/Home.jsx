@@ -9,25 +9,27 @@ import TechnoCard from "../components/technoCard";
 
 function Home() {
   return (
-    <div className="bg-lightblue">
-      <div className="bg-[url('./assets/images/background-zigzag.jpeg')] bg-cover h-96 md:h-128 ">
-        <p className="text-3xl ml-8 pt-16 md:pt-48 md:ml-28">PORTFOLIO</p>
-        <h1 className="font-source text-5xl ml-8 mt-6 md:text-9xl md:ml-28">
+    <main className="bg-lightblue">
+      <div className="bg-[url('./assets/images/background-zigzag.jpeg')] bg-cover h-96 md:h-[500px] lg:h-128 relative">
+        <p className="text-3xl ml-8 pt-16 md:ml-16 lg:pt-48 lg:ml-28">
+          PORTFOLIO
+        </p>
+        <h1 className="font-source text-5xl ml-8 mt-6 md:ml-16 md:text-8xl lg:text-9xl lg:ml-28">
           Claire Girard
         </h1>
-        <div className="flex flex-col  md:relative md:flex-row">
-          <p className="text-2xl mt-16 ml-8 md:text-4xl md:ml-28 md:mt-48">
+        <div className="flex flex-col  lg:relative lg:flex-row">
+          <p className="text-2xl mt-16 ml-8 md:ml-16 lg:text-4xl lg:ml-28 lg:mt-48">
             DÉVELOPPEUSE WEB
           </p>
           <a
             href="#contact"
-            className="text-2xl ml-8 mt-6 md:text-3xl md:mt-48 md:absolute md:right-28 md:border-black md:border-b md:pb-1"
+            className="text-2xl ml-8 mt-6 md:ml-16 lg:ml-28 lg:text-3xl lg:mt-48 lg:absolute lg:right-28 md:border-black md:border-b md:w-fit lg:pb-1"
           >
             CONTACTEZ-MOI
           </a>
           <div className="w-52 ml-8 border-black border-b md:hidden"></div>
         </div>
-        <div className="md:flex md:-mt-24 md:justify-center md:items-center">
+        <div className="md:flex absolute bottom-2 right-2/4 md:bottom-10 md:justify-center md:items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -48,13 +50,13 @@ function Home() {
         <h2 className="font-bold text-2xl mt-8 md:text-4xl md:mt-24 md:mb-4">
           À propos de moi
         </h2>
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col lg:flex-row">
           <img
             src="../src/assets/images/woman.png"
             alt="image de femme"
-            className="mt-4 w-48 self-center md:w-96"
+            className="mt-4 w-48 self-center lg:w-96"
           />
-          <div className="mt-4 md:self-center md:ml-24 md:text-xl">
+          <div className="mt-4 md:self-center lg:ml-24 md:text-xl">
             <p>
               Après 14 années d’expériences professionnelles, principalement
               dans le domaine du contrôle de gestion, j’ai entrepris une
@@ -77,14 +79,14 @@ function Home() {
         <h2 className="font-bold text-2xl mt-8 mb-6 md:text-4xl md:mt-24 md:mb-10">
           Mes expériences professionnelles
         </h2>
-        <div className="md:grid md:grid-cols-4 md:grid-rows-2">
+        <div className="lg:grid lg:grid-cols-4 lg:grid-rows-2">
           <img
             src={logoAdecco}
             alt="Logo Adecco"
             className="w-24 mb-4 md:mb-0 md:w-48"
           />
           <div className="col-span-3">
-            <h3 className="text-xl mb-2 font-bold">
+            <h3 className="text-xl mb-2 font-bold md:mt-6">
               Responsable Transformation
             </h3>
             <p>
@@ -109,7 +111,7 @@ function Home() {
           <img
             src={logoBoulanger}
             alt="Logo Sourcing & Création"
-            className="w-36 md:w-52 mt-10 md:mt-6"
+            className="w-36 md:w-52 mt-10 lg:mt-6"
           />
           <div className="col-span-3">
             <h3 className="text-xl mb-2 font-bold mt-6">
@@ -131,14 +133,14 @@ function Home() {
           href="https://www.linkedin.com/in/claire-girard-48590711b"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-2xl ml-8 mt-8 md:-mt-24 md:ml-0"
+          className="text-2xl ml-8 mt-8 lg:-mt-24 lg:ml-0"
         >
           Pour en savoir plus, consultez mon profil LinkedIn
         </a>
         <img
           src={logoLinkedin}
           alt="Logo LinkedIn"
-          className="w-10 mr-8 mt-8 md:ml-4 md:mr-0 md:-mt-24"
+          className="w-10 mr-8 mt-8 lg:ml-4 lg:mr-0 lg:-mt-24"
         />
       </div>
       <div className="mx-8 md:mx-16">
@@ -146,7 +148,7 @@ function Home() {
           Mes projets
         </h2>
         <div className="flex flex-col md:flex-row">
-          <div className="h-48 md:w-[1000px] md:h-56 overflow-hidden hover:overflow-y-scroll">
+          <div className="h-48 md:w-[1000px] md:h-56 overflow-hidden hover:overflow-y-scroll md:mt-2">
             <img src={cineAccueil} alt="Accueil du projet 1" className="" />
           </div>
           <div>
@@ -163,7 +165,7 @@ function Home() {
               créé une fonctionnalité non présente sur le site initial : en
               indiquant votre année de naissance, vous avez la possibilité de
               connaitre le film ayant eu le plus de succès cette année mais
-              également d'avoir une rétrospective des films qui ont pu marqué
+              également d'avoir une rétrospective des films qui ont pu marquer
               l'année de vos 5, 10, 15 ans ...
             </p>
             <p className="md:ml-4">
@@ -174,7 +176,7 @@ function Home() {
         </div>
         <div className="flex flex-col md:flex-row">
           <div>
-            <h3 className="text-3xl mt-8 mb-2">Tuum Vehiculum</h3>
+            <h3 className="text-2xl mt-8 mb-2">Tuum Vehiculum</h3>
             <div className="md:hidden">
               <img
                 src={tuumAccueil}
@@ -185,12 +187,12 @@ function Home() {
             <p className="mt-4 md:mt-0">
               Ce projet a été réalisé dans le cadre du 1er hackathon de notre
               formation. Nous avons eu 24 heures pour le créer. L'objectif était
-              d'emmener la technologie d'aujourd'hui au Moyen-Âge. Nous avons
+              d'amener la technologie d'aujourd'hui au Moyen-Âge. Nous avons
               ainsi créé un site qui permet de commander une course avec
               possibilité de choix de la destination, du véhicule.
             </p>
           </div>
-          <div className="hidden md:block md:w-[1000px] md:h-56 md:overflow-hidden md:hover:overflow-y-scroll">
+          <div className="hidden md:block md:w-[1000px] md:h-56 md:overflow-hidden md:mt-2">
             <img
               src={tuumAccueil}
               alt="Accueil du projet 1"
@@ -203,7 +205,7 @@ function Home() {
         </h3>
       </div>
       <div className="mx-8 md:mx-16">
-        <h2 className="font-bold text-2xl mt-8 mb-6 md:text-4xl md:mt-24 md:mb-12">
+        <h2 className="font-bold text-2xl mt-8 mb-6 md:text-4xl md:mt-12 lg:mt-24 md:mb-8">
           Technos
         </h2>
         <div className="md:grid md:grid-cols-2 md:grid-rows-5">
@@ -214,7 +216,7 @@ function Home() {
       </div>
       <div className="mx-8 md:mx-16">
         <h2
-          className="font-bold text-2xl mt-8 mb-6 md:text-4xl md:mt-24 md:mb-12"
+          className="font-bold text-2xl mt-8 mb-6 md:text-4xl md:mt-12 lg:mt-24 md:mb-8"
           id="contact"
         >
           Contactez-moi
@@ -229,7 +231,7 @@ function Home() {
         </a>
       </div>
       <div className="bg-[url('./assets/images/background-zigzag.jpeg')] bg-cover h-28 mt-10"></div>
-    </div>
+    </main>
   );
 }
 
