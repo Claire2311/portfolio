@@ -6,6 +6,7 @@ import cineAccueil from "../assets/images/CineReact-Accueil.png";
 import tuumAccueil from "../assets/images/TuunVehiculum-Accueil.png";
 import technos from "../data";
 import TechnoCard from "../components/technoCard";
+import logoGitHub from "../assets/images/technos/github.png";
 
 function Home() {
   return (
@@ -64,15 +65,22 @@ function Home() {
               m'ayant toujours attiré.
             </p>
             <p className="mt-2">
-              Grâce à aux différents postes que j'ai occupé, j'ai pu développer
-              un esprit d'analyse, de l'autonomie ainsi que des compétences en
+              Grâce aux différents postes que j'ai occupé, j'ai pu développer un
+              esprit d'analyse, de l'autonomie ainsi que des compétences en
               résolution de problèmes. J'ai évolué dans des environnements en
               mode projet ainsi que lean.
             </p>
             <p className="mt-2">
               Je souhaite mettre à profit ces compétences dans le cadre de ma
-              reconversion. N'hésitez pas à me contacter pour que nous puissions
-              échanger ensemble.
+              reconversion.{" "}
+              <a
+                href="https://www.linkedin.com/in/claire-girard-48590711b"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                N'hésitez pas à me contacter pour que nous puissions échanger
+                ensemble.
+              </a>
             </p>
           </div>
         </div>
@@ -141,6 +149,21 @@ function Home() {
           src={logoLinkedin}
           alt="Logo LinkedIn"
           className="w-10 mr-8 mt-8 lg:ml-4 lg:mr-0 lg:-mt-24"
+        />
+      </div>
+      <div className="flex md:justify-center items-center">
+        <a
+          href="https://github.com/Claire2311"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-2xl ml-8 mt-8 lg:-mt-4 lg:ml-0"
+        >
+          Visitez mon GitHub
+        </a>
+        <img
+          src={logoGitHub}
+          alt="Logo GitHub"
+          className="w-10 ml-4 mr-8 mt-8 lg:ml-4 lg:mr-0 lg:-mt-4"
         />
       </div>
       <div className="mx-8 md:mx-16">
