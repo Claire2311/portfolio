@@ -1,5 +1,5 @@
+import PropTypes from "prop-types";
 function TechnoCard({ name, image }) {
-  console.log(image);
   return (
     <div className="flex  border-gray-300 border-t border-r-lightblue border-r-[80px]">
       <div className="w-14">
@@ -9,5 +9,10 @@ function TechnoCard({ name, image }) {
     </div>
   );
 }
+
+TechnoCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};
 
 export default TechnoCard;

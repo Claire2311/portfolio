@@ -5,11 +5,8 @@ import logoLinkedin from "../assets/images/logo-linkedin.png";
 import cineAccueil from "../assets/images/CineReact-Accueil.png";
 import tuumAccueil from "../assets/images/TuunVehiculum-Accueil.png";
 import technos from "../data";
-import TechnoCard from "../components/technoCard";
+import TechnoCard from "../components/TechnoCard";
 import logoGitHub from "../assets/images/github.png";
-
-// import jsImg from "../assets/images/javascript.png";
-// import htmlImg from "../assets/images/html.png";
 
 function Home() {
   return (
