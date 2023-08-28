@@ -1,42 +1,42 @@
 const technos = [
   {
-    img: "../src/assets/images/technos/javascript.png",
+    img: "javascript.png",
     name: "JavaScript",
   },
   {
-    img: "../src/assets/images/technos/html.png",
+    img: "html.png",
     name: "HTML",
   },
   {
-    img: "../src/assets/images/technos/css.png",
+    img: "css.png",
     name: "CSS",
   },
   {
-    img: "../src/assets/images/technos/react.svg",
+    img: "react.svg",
     name: "React",
   },
   {
-    img: "../src/assets/images/technos/Expressjs.png",
+    img: "Expressjs.png",
     name: "ExpressJS",
   },
   {
-    img: "../src/assets/images/technos/sql.png",
+    img: "sql.png",
     name: "SQL",
   },
   {
-    img: "../src/assets/images/technos/node.svg",
+    img: "node.svg",
     name: "NodeJS",
   },
   {
-    img: "../src/assets/images/technos/tailwind.png",
+    img: "tailwind.png",
     name: "Tailwind",
   },
   {
-    img: "../src/assets/images/technos/github.png",
+    img: "github.png",
     name: "GitHub",
   },
   {
-    img: "../src/assets/images/technos/excel.png",
+    img: "excel.png",
     name: "Excel",
   },
 ];

@@ -1,12 +1,15 @@
+import woman from "../assets/images/woman.png";
 import logoAdecco from "../assets/images/logo-adecco.png";
-import logoSourcing from "../assets/images/logo-sourcing.jpeg";
 import logoBoulanger from "../assets/images/logo_boulanger.png";
 import logoLinkedin from "../assets/images/logo-linkedin.png";
 import cineAccueil from "../assets/images/CineReact-Accueil.png";
 import tuumAccueil from "../assets/images/TuunVehiculum-Accueil.png";
 import technos from "../data";
 import TechnoCard from "../components/technoCard";
-import logoGitHub from "../assets/images/technos/github.png";
+import logoGitHub from "../assets/images/github.png";
+
+// import jsImg from "../assets/images/javascript.png";
+// import htmlImg from "../assets/images/html.png";
 
 function Home() {
   return (
@@ -53,7 +56,7 @@ function Home() {
         </h2>
         <div className="flex flex-col lg:flex-row">
           <img
-            src="../src/assets/images/woman.png"
+            src={woman}
             alt="image de femme"
             className="mt-4 w-48 self-center lg:w-96"
           />
