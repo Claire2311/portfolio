@@ -12,14 +12,14 @@ function Home() {
   return (
     <main className="bg-lightblue">
       <div className="bg-[url('./assets/images/background-zigzag.jpeg')] bg-cover h-96 md:h-[500px] lg:h-128 relative">
-        <p className="text-3xl ml-8 pt-16 md:ml-16 lg:pt-48 lg:ml-28">
+        <p className="text-3xl ml-8 pt-16 select-none md:ml-16 lg:pt-48 lg:ml-28">
           PORTFOLIO
         </p>
-        <h1 className="font-source text-5xl ml-8 mt-6 md:ml-16 md:text-8xl lg:text-9xl lg:ml-28">
+        <h1 className="font-source text-5xl ml-8 mt-6 select-none md:ml-16 md:text-8xl lg:text-9xl lg:ml-28">
           Claire Girard
         </h1>
         <div className="flex flex-col  lg:relative lg:flex-row">
-          <p className="text-2xl mt-16 ml-8 md:ml-16 lg:text-4xl lg:ml-28 lg:mt-48">
+          <p className="text-2xl mt-16 ml-8 select-none md:ml-16 lg:text-4xl lg:ml-28 lg:mt-48">
             DÉVELOPPEUSE WEB
           </p>
           <a
@@ -91,7 +91,7 @@ function Home() {
           <img
             src={logoAdecco}
             alt="Logo Adecco"
-            className="w-24 mb-4 md:mb-0 md:w-48"
+            className="w-24 mb-4 md:mb-0 md:w-40"
           />
           <div className="col-span-3">
             <h3 className="text-xl mb-2 font-bold md:mt-6">
@@ -199,7 +199,7 @@ function Home() {
         </div>
         <div className="flex flex-col md:flex-row">
           <div>
-            <h3 className="text-2xl mt-8 mb-2">Tuum Vehiculum</h3>
+            <h3 className="text-2xl mt-8 mb-2 md:text-3xl">Tuum Vehiculum</h3>
             <div className="md:hidden">
               <img
                 src={tuumAccueil}
@@ -213,6 +213,10 @@ function Home() {
               d'amener la technologie d'aujourd'hui au Moyen-Âge. Nous avons
               ainsi créé un site qui permet de commander une course avec
               possibilité de choix de la destination, du véhicule.
+            </p>
+            <p className="mt-4 md:mt-0">
+              Pour y accéder,{" "}
+              <a href="https://tuum-vehiculum.achap.fr/">cliquez ici 🏰.</a>
             </p>
           </div>
           <div className="hidden md:block md:w-[1000px] md:h-56 md:overflow-hidden md:mt-2">
