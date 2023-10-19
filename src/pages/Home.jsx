@@ -7,6 +7,8 @@ import tuumAccueil from "../assets/images/TuunVehiculum-Accueil.png";
 import technos from "../data";
 import TechnoCard from "../components/TechnoCard";
 import logoGitHub from "../assets/images/github.png";
+import eatingnamnam from "../assets/images/recipe-eatingnamnam.png";
+import accessKids from "../assets/images/AccessKids-Jeu-Alphabet.png";
 
 function Home() {
   return (
@@ -171,18 +173,85 @@ function Home() {
           Mes projets
         </h2>
         <div className="flex flex-col md:flex-row">
-          <div className="h-48 md:w-[1000px] md:h-56 overflow-hidden hover:overflow-y-scroll md:mt-2">
-            <img src={cineAccueil} alt="Accueil du projet 1" className="" />
+          <div>
+            <h3 className="text-2xl mt-8 mb-2 md:text-3xl">Eating Nam Nam</h3>
+            <div className="overflow-hidden h-48 md:hidden">
+              <img
+                src={eatingnamnam}
+                alt="Page d'accueil Eating Nam Nam"
+                className="mt-2 md:mt-8"
+              />
+            </div>
+            <p className="mt-4 md:mt-0">
+              Eating Nam Nam est une plateforme de partage de recettes entre
+              utilisateurs.
+              <br /> Après connexion au site, les utilisateurs peuvent chercher,
+              consulter, créer, commenter et mettre en favori des recettes. Sur
+              chaque recette, vous trouverez les apports nutritionnels pour une
+              portion. Il est également possible de faire varier la quantité
+              d’ingrédients en fonction du nombre de personnes pour lesquels
+              vous prévoyez la recette. Lors de la création d’une recette,
+              l’utilisateur peut créer un ingrédient s’il ne retrouve pas
+              l’ingrédient souhaité sur le site. Il peut également gagner des
+              badges en fonction de ces actions.
+            </p>
+            <p className="mt-4 md:mt-0 mb-8">
+              Pour y accéder,{" "}
+              <a
+                href="https://eating-nam-nam.c-sia.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                cliquez ici 🧑‍🍳👨‍🍳.
+              </a>
+            </p>
+          </div>
+          <div className="hidden md:block md:w-[1200px] md:h-60 overflow-hidden hover:overflow-y-scroll md:mt-2">
+            <img
+              src={eatingnamnam}
+              alt="Page d'accueil Eating Nam Nam"
+              className="mt-8 ml-4"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row">
+          <div className="md:mt-2">
+            <img
+              src={accessKids}
+              alt="Page d'accueil Access Kids"
+              className="h-52 w-[470px]"
+            />
           </div>
           <div>
             <h3 className="text-2xl mt-4 mb-2 md:text-3xl md:ml-4 md:mt-0">
-              CinéReact
+              Access Kids
             </h3>
             <p className="md:ml-4">
+              Application réalisé lors d'un hackathon ayant pour thème
+              l'éducation de demain.
+            </p>
+            <p className="md:ml-4">
+              C'est une application éducative pour les jeunes enfants de 3 à 6
+              ans qui fonctionne sous format de jeux pour apprendre l'alphabet,
+              compter et se sensibiliser face aux dangers du quotidien
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row">
+          <div>
+            <h3 className="text-2xl mt-8 mb-2 md:text-3xl">CinéRéact</h3>
+            <div className="overflow-hidden h-48 md:hidden">
+              <img
+                src={cineAccueil}
+                alt="Page d'accueil CinéReact"
+                className="mt-2 md:mt-8"
+              />
+            </div>
+            <p className="mt-4 md:mt-0">
               Site internet réalisé dans le cadre de ma formation qui permet de
               retrouver des informations sur les films, séries et acteurs.
             </p>
-            <p className="md:ml-4">
+            <p className="mt-4 md:mt-0">
               Ce site s'inspire du site themoviedb.org. Réalisé en équipe, nous
               avons utilisé les API proposées par le site. Nous avons également
               créé une fonctionnalité non présente sur le site initial : en
@@ -191,40 +260,54 @@ function Home() {
               également d'avoir une rétrospective des films qui ont pu marquer
               l'année de vos 5, 10, 15 ans ...
             </p>
-            <p className="md:ml-4">
+            <p className="mt-4 md:mt-0 md:mb-8">
               Pour y accéder,{" "}
-              <a href="https://cinereact.cdnsamuel.fr/">cliquez ici 🎬.</a>
+              <a
+                href="https://cinereact.cdnsamuel.fr/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                cliquez ici 🎬.
+              </a>
             </p>
+          </div>
+          <div className="hidden md:block md:w-[1200px] md:h-60 overflow-hidden hover:overflow-y-scroll md:mt-2">
+            <img
+              src={cineAccueil}
+              alt="Page d'accueil CinéReact"
+              className="mt-8 ml-4"
+            />
           </div>
         </div>
         <div className="flex flex-col md:flex-row">
+          <div className="md:mt-2 md:mb-8">
+            <img
+              src={tuumAccueil}
+              alt="Page d'accueil Tuum Vehiculum"
+              className="h-52 w-[800px]"
+            />
+          </div>
           <div>
-            <h3 className="text-2xl mt-8 mb-2 md:text-3xl">Tuum Vehiculum</h3>
-            <div className="md:hidden">
-              <img
-                src={tuumAccueil}
-                alt="Accueil du projet 1"
-                className="mt-2 md:mt-8"
-              />
-            </div>
-            <p className="mt-4 md:mt-0">
+            <h3 className="text-2xl mt-4 mb-2 md:text-3xl md:ml-4 md:mt-0">
+              Tuum Vehiculum
+            </h3>
+            <p className="md:ml-4">
               Ce projet a été réalisé dans le cadre du 1er hackathon de notre
               formation. Nous avons eu 24 heures pour le créer. L'objectif était
               d'amener la technologie d'aujourd'hui au Moyen-Âge. Nous avons
               ainsi créé un site qui permet de commander une course avec
               possibilité de choix de la destination, du véhicule.
             </p>
-            <p className="mt-4 md:mt-0">
+            <p className="md:ml-4">
               Pour y accéder,{" "}
-              <a href="https://tuum-vehiculum.achap.fr/">cliquez ici 🏰.</a>
+              <a
+                href="https://tuum-vehiculum.achap.fr/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                cliquez ici 🏰.
+              </a>
             </p>
-          </div>
-          <div className="hidden md:block md:w-[1000px] md:h-56 md:overflow-hidden md:mt-2">
-            <img
-              src={tuumAccueil}
-              alt="Accueil du projet 1"
-              className="mt-8 ml-4"
-            />
           </div>
         </div>
         <h3 className="text-xl font-bold mt-8 md:text-2xl">
