@@ -9,8 +9,14 @@ import TechnoCard from "../components/TechnoCard";
 import logoGitHub from "../assets/images/github.png";
 import eatingnamnam from "../assets/images/recipe-eatingnamnam.png";
 import accessKids from "../assets/images/AccessKids-Jeu-Alphabet.png";
+import { useRef } from "react";
 
 function Home() {
+  const aboutMe = useRef(null);
+  const goOnAboutMe = () => {
+    aboutMe.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <main className="bg-lightblue">
       <div className="bg-[url('./assets/images/background-zigzag.jpeg')] bg-cover h-96 md:h-[500px] lg:h-128 relative">
@@ -33,24 +39,29 @@ function Home() {
           <div className="w-52 ml-8 border-black border-b md:hidden"></div>
         </div>
         <div className="md:flex absolute bottom-2 right-2/4 md:bottom-10 md:justify-center md:items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6 animate-bounce"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
-            />
-          </svg>
+          <button type="button" onClick={goOnAboutMe}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6 animate-bounce"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </button>
         </div>
       </div>
       <div className="mx-8 md:mx-16">
-        <h2 className="font-bold text-2xl mt-8 md:text-4xl md:mt-24 md:mb-4">
+        <h2
+          className="font-bold text-2xl mt-8 md:text-4xl md:mt-24 md:mb-4"
+          ref={aboutMe}
+        >
           À propos de moi
         </h2>
         <div className="flex flex-col lg:flex-row">
@@ -96,7 +107,7 @@ function Home() {
             className="w-24 mb-4 md:mb-0 md:w-40"
           />
           <div className="col-span-3">
-            <h3 className="text-xl mb-2 font-bold md:mt-6">
+            <h3 className="text-xl mb-2 font-bold ">
               Responsable Transformation
             </h3>
             <p>
@@ -216,6 +227,7 @@ function Home() {
         </div>
         <div className="flex flex-col md:flex-row">
           <div className="md:mt-2">
+            <h3 className="text-2xl mt-4 mb-2 md:hidden">Access Kids</h3>
             <img
               src={accessKids}
               alt="Page d'accueil Access Kids"
@@ -223,10 +235,10 @@ function Home() {
             />
           </div>
           <div>
-            <h3 className="text-2xl mt-4 mb-2 md:text-3xl md:ml-4 md:mt-0">
+            <h3 className="hidden md:block md:text-2xl md:mt-4 md:mb-2 md:text-3xl md:ml-4 md:mt-0">
               Access Kids
             </h3>
-            <p className="md:ml-4">
+            <p className="mt-4 md:mt-0 md:ml-4">
               Application réalisé lors d'un hackathon ayant pour thème
               l'éducation de demain.
             </p>
@@ -260,7 +272,7 @@ function Home() {
               également d'avoir une rétrospective des films qui ont pu marquer
               l'année de vos 5, 10, 15 ans ...
             </p>
-            <p className="mt-4 md:mt-0 md:mb-8">
+            <p className="mt-4 md:mt-0 mb-8">
               Pour y accéder,{" "}
               <a
                 href="https://cinereact.cdnsamuel.fr/"
@@ -281,6 +293,7 @@ function Home() {
         </div>
         <div className="flex flex-col md:flex-row">
           <div className="md:mt-2 md:mb-8">
+            <h3 className="text-2xl mt-4 mb-2 md:hidden">Tuum Vehiculum</h3>
             <img
               src={tuumAccueil}
               alt="Page d'accueil Tuum Vehiculum"
@@ -288,10 +301,10 @@ function Home() {
             />
           </div>
           <div>
-            <h3 className="text-2xl mt-4 mb-2 md:text-3xl md:ml-4 md:mt-0">
+            <h3 className="hidden md:block md:text-2xl md:mt-4 md:mb-2 md:text-3xl md:ml-4 md:mt-0">
               Tuum Vehiculum
             </h3>
-            <p className="md:ml-4">
+            <p className="mt-4 md:mt-0 md:ml-4">
               Ce projet a été réalisé dans le cadre du 1er hackathon de notre
               formation. Nous avons eu 24 heures pour le créer. L'objectif était
               d'amener la technologie d'aujourd'hui au Moyen-Âge. Nous avons
