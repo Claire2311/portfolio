@@ -36,8 +36,8 @@ const technos = [
     name: "GitHub",
   },
   {
-    img: "excel.png",
-    name: "Excel",
+    img: "figma.png",
+    name: "Figma",
   },
 ];
 
