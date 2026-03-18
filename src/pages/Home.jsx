@@ -1,25 +1,33 @@
+import woman from "../assets/images/woman.png";
 import logoAdecco from "../assets/images/logo-adecco.png";
-import logoSourcing from "../assets/images/logo-sourcing.jpeg";
 import logoBoulanger from "../assets/images/logo_boulanger.png";
 import logoLinkedin from "../assets/images/logo-linkedin.png";
 import cineAccueil from "../assets/images/CineReact-Accueil.png";
 import tuumAccueil from "../assets/images/TuunVehiculum-Accueil.png";
 import technos from "../data";
-import TechnoCard from "../components/technoCard";
-import logoGitHub from "../assets/images/technos/github.png";
+import TechnoCard from "../components/TechnoCard";
+import logoGitHub from "../assets/images/github.png";
+import eatingnamnam from "../assets/images/recipe-eatingnamnam.png";
+import accessKids from "../assets/images/AccessKids-Jeu-Alphabet.png";
+import { useRef } from "react";
 
 function Home() {
+  const aboutMe = useRef(null);
+  const goOnAboutMe = () => {
+    aboutMe.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <main className="bg-lightblue">
       <div className="bg-[url('./assets/images/background-zigzag.jpeg')] bg-cover h-96 md:h-[500px] lg:h-128 relative">
-        <p className="text-3xl ml-8 pt-16 md:ml-16 lg:pt-48 lg:ml-28">
+        <p className="text-3xl ml-8 pt-16 select-none md:ml-16 lg:pt-48 lg:ml-28">
           PORTFOLIO
         </p>
-        <h1 className="font-source text-5xl ml-8 mt-6 md:ml-16 md:text-8xl lg:text-9xl lg:ml-28">
+        <h1 className="font-source text-5xl ml-8 mt-6 select-none md:ml-16 md:text-8xl lg:text-9xl lg:ml-28">
           Claire Girard
         </h1>
         <div className="flex flex-col  lg:relative lg:flex-row">
-          <p className="text-2xl mt-16 ml-8 md:ml-16 lg:text-4xl lg:ml-28 lg:mt-48">
+          <p className="text-2xl mt-16 ml-8 select-none md:ml-16 lg:text-4xl lg:ml-28 lg:mt-48">
             DÉVELOPPEUSE WEB
           </p>
           <a
@@ -31,29 +39,34 @@ function Home() {
           <div className="w-52 ml-8 border-black border-b md:hidden"></div>
         </div>
         <div className="md:flex absolute bottom-2 right-2/4 md:bottom-10 md:justify-center md:items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6 animate-bounce"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
-            />
-          </svg>
+          <button type="button" onClick={goOnAboutMe}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6 animate-bounce"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </button>
         </div>
       </div>
       <div className="mx-8 md:mx-16">
-        <h2 className="font-bold text-2xl mt-8 md:text-4xl md:mt-24 md:mb-4">
+        <h2
+          className="font-bold text-2xl mt-8 md:text-4xl md:mt-24 md:mb-4"
+          ref={aboutMe}
+        >
           À propos de moi
         </h2>
         <div className="flex flex-col lg:flex-row">
           <img
-            src="../src/assets/images/woman.png"
+            src={woman}
             alt="image de femme"
             className="mt-4 w-48 self-center lg:w-96"
           />
@@ -91,10 +104,10 @@ function Home() {
           <img
             src={logoAdecco}
             alt="Logo Adecco"
-            className="w-24 mb-4 md:mb-0 md:w-48"
+            className="w-24 mb-4 md:mb-0 md:w-40"
           />
           <div className="col-span-3">
-            <h3 className="text-xl mb-2 font-bold md:mt-6">
+            <h3 className="text-xl mb-2 font-bold ">
               Responsable Transformation
             </h3>
             <p>
@@ -171,18 +184,86 @@ function Home() {
           Mes projets
         </h2>
         <div className="flex flex-col md:flex-row">
-          <div className="h-48 md:w-[1000px] md:h-56 overflow-hidden hover:overflow-y-scroll md:mt-2">
-            <img src={cineAccueil} alt="Accueil du projet 1" className="" />
+          <div>
+            <h3 className="text-2xl mt-8 mb-2 md:text-3xl">Eating Nam Nam</h3>
+            <div className="overflow-hidden h-48 md:hidden">
+              <img
+                src={eatingnamnam}
+                alt="Page d'accueil Eating Nam Nam"
+                className="mt-2 md:mt-8"
+              />
+            </div>
+            <p className="mt-4 md:mt-0">
+              Eating Nam Nam est une plateforme de partage de recettes entre
+              utilisateurs.
+              <br /> Après connexion au site, les utilisateurs peuvent chercher,
+              consulter, créer, commenter et mettre en favori des recettes. Sur
+              chaque recette, vous trouverez les apports nutritionnels pour une
+              portion. Il est également possible de faire varier la quantité
+              d’ingrédients en fonction du nombre de personnes pour lesquels
+              vous prévoyez la recette. Lors de la création d’une recette,
+              l’utilisateur peut créer un ingrédient s’il ne retrouve pas
+              l’ingrédient souhaité sur le site. Il peut également gagner des
+              badges en fonction de ces actions.
+            </p>
+            <p className="mt-4 md:mt-0 mb-8">
+              Pour y accéder,{" "}
+              <a
+                href="https://eating-nam-nam.c-sia.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                cliquez ici 🧑‍🍳👨‍🍳.
+              </a>
+            </p>
+          </div>
+          <div className="hidden md:block md:w-[1200px] md:h-60 overflow-hidden hover:overflow-y-scroll md:mt-2">
+            <img
+              src={eatingnamnam}
+              alt="Page d'accueil Eating Nam Nam"
+              className="mt-8 ml-4"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row">
+          <div className="md:mt-2">
+            <h3 className="text-2xl mt-4 mb-2 md:hidden">Access Kids</h3>
+            <img
+              src={accessKids}
+              alt="Page d'accueil Access Kids"
+              className="h-52 w-[470px]"
+            />
           </div>
           <div>
-            <h3 className="text-2xl mt-4 mb-2 md:text-3xl md:ml-4 md:mt-0">
-              CinéReact
+            <h3 className="hidden md:block md:text-2xl md:mt-4 md:mb-2 md:text-3xl md:ml-4 md:mt-0">
+              Access Kids
             </h3>
+            <p className="mt-4 md:mt-0 md:ml-4">
+              Application réalisé lors d'un hackathon ayant pour thème
+              l'éducation de demain.
+            </p>
             <p className="md:ml-4">
+              C'est une application éducative pour les jeunes enfants de 3 à 6
+              ans qui fonctionne sous format de jeux pour apprendre l'alphabet,
+              compter et se sensibiliser face aux dangers du quotidien
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row">
+          <div>
+            <h3 className="text-2xl mt-8 mb-2 md:text-3xl">CinéRéact</h3>
+            <div className="overflow-hidden h-48 md:hidden">
+              <img
+                src={cineAccueil}
+                alt="Page d'accueil CinéReact"
+                className="mt-2 md:mt-8"
+              />
+            </div>
+            <p className="mt-4 md:mt-0">
               Site internet réalisé dans le cadre de ma formation qui permet de
               retrouver des informations sur les films, séries et acteurs.
             </p>
-            <p className="md:ml-4">
+            <p className="mt-4 md:mt-0">
               Ce site s'inspire du site themoviedb.org. Réalisé en équipe, nous
               avons utilisé les API proposées par le site. Nous avons également
               créé une fonctionnalité non présente sur le site initial : en
@@ -191,36 +272,55 @@ function Home() {
               également d'avoir une rétrospective des films qui ont pu marquer
               l'année de vos 5, 10, 15 ans ...
             </p>
-            <p className="md:ml-4">
+            <p className="mt-4 md:mt-0 mb-8">
               Pour y accéder,{" "}
-              <a href="https://cinereact.cdnsamuel.fr/">cliquez ici 🎬.</a>
+              <a
+                href="https://cinereact.cdnsamuel.fr/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                cliquez ici 🎬.
+              </a>
             </p>
+          </div>
+          <div className="hidden md:block md:w-[1200px] md:h-60 overflow-hidden hover:overflow-y-scroll md:mt-2">
+            <img
+              src={cineAccueil}
+              alt="Page d'accueil CinéReact"
+              className="mt-8 ml-4"
+            />
           </div>
         </div>
         <div className="flex flex-col md:flex-row">
+          <div className="md:mt-2 md:mb-8">
+            <h3 className="text-2xl mt-4 mb-2 md:hidden">Tuum Vehiculum</h3>
+            <img
+              src={tuumAccueil}
+              alt="Page d'accueil Tuum Vehiculum"
+              className="h-52 w-[800px]"
+            />
+          </div>
           <div>
-            <h3 className="text-2xl mt-8 mb-2">Tuum Vehiculum</h3>
-            <div className="md:hidden">
-              <img
-                src={tuumAccueil}
-                alt="Accueil du projet 1"
-                className="mt-2 md:mt-8"
-              />
-            </div>
-            <p className="mt-4 md:mt-0">
+            <h3 className="hidden md:block md:text-2xl md:mt-4 md:mb-2 md:text-3xl md:ml-4 md:mt-0">
+              Tuum Vehiculum
+            </h3>
+            <p className="mt-4 md:mt-0 md:ml-4">
               Ce projet a été réalisé dans le cadre du 1er hackathon de notre
               formation. Nous avons eu 24 heures pour le créer. L'objectif était
               d'amener la technologie d'aujourd'hui au Moyen-Âge. Nous avons
               ainsi créé un site qui permet de commander une course avec
               possibilité de choix de la destination, du véhicule.
             </p>
-          </div>
-          <div className="hidden md:block md:w-[1000px] md:h-56 md:overflow-hidden md:mt-2">
-            <img
-              src={tuumAccueil}
-              alt="Accueil du projet 1"
-              className="mt-8 ml-4"
-            />
+            <p className="md:ml-4">
+              Pour y accéder,{" "}
+              <a
+                href="https://tuum-vehiculum.achap.fr/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                cliquez ici 🏰.
+              </a>
+            </p>
           </div>
         </div>
         <h3 className="text-xl font-bold mt-8 md:text-2xl">
